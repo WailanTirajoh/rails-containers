@@ -1,0 +1,15 @@
+<div id="<%= dom_id container %>">
+  <h2 class="text-2xl font-medium">
+    <%= container.name %>
+  </h2>
+  <div class="my-5">
+    <div class="flex items-center">
+      <%= button_to "Start", start_container_path(container), method: :put, class: "rounded-md py-2 px-5 bg-blue-600 text-white inline-block font-medium cursor-pointer" %>
+      <%= button_to "Stop", stop_container_path(container), method: :put, class: "rounded-md py-2 px-5 bg-red-600 text-white inline-block font-medium cursor-pointer" %>
+    </div>
+  </div>
+  <p class="my-5">
+    <strong class="font-medium"> Status: </strong> <span class="<%= container.status == 'running'  ? 'text-green-500' : 'text-red-500' %>"> <%= container.status %> </span>
+  </p>
+
+</div>

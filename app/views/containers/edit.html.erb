@@ -1,0 +1,11 @@
+<div class="mx-auto md:w-2/3 w-full">
+  <h1 class="font-old text-4xl">Editing container</h1>
+  <%= render "form", container: @container %>
+
+  <br>
+
+  <div>
+    <%= link_to "Show this container", @container, class: "ml-2 rounded-lg py-3 px-5 bg-gray-200" %> |
+    <%= link_to "Back to containers", containers_path, class: "ml-2 rounded-lg py-3 px-5 bg-gray-200" %>
+  </div>
+</div>
